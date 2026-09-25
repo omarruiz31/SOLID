@@ -6,6 +6,7 @@ public static class FabricaAlien
 {
     public static IAlien CrearDesdeMuestra(MuestraADN muestra)
     {
-        return new CreadrorAlien(muestra.Nombre, muestra.Descripcion, muestra.Habilidad);
+        return new CreadorAlien(muestra.Nombre, muestra.Descripcion, muestra.Habilidad);
+
     }
 }

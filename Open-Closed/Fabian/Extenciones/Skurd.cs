@@ -1,11 +1,10 @@
 using OCP.Alien;
 
-namespace OCP.Extensiones;
+namespace OCP.Extenciones;
 
-public class Skurd
+public class Skurd : IAlien
 {
     private readonly IAlien _alienBase;
-
     private readonly IAlien _alienDonador;
 
     public Skurd(IAlien alienBase, IAlien alienDonador)
@@ -14,13 +13,12 @@ public class Skurd
         _alienDonador = alienDonador;
     }
 
-    public string Nombre => $"{_alienBase.Nombre} + Skurd{_alienDonador.Nombre}";
-    public string Descripcion => $"{_alienBase.Descripcion} con las habilidades de {_alienDonador.Nombre}";
+    public string Nombre => $"{_alienBase.Nombre} + Skurd({_alienDonador.Nombre})";
+    public string Descripcion => $"{_alienBase.Descripcion} con las habilidades de {_alienDonador.Descripcion}";
     public void UsarHabilidad()
     {
         _alienBase.UsarHabilidad();
-        System.Console.Writeline($" Skurd le presta las habilidades de {_alienDonador.Nombre} ");
+        System.Console.WriteLine($"Skurd le prestra las habilidades de");
         _alienDonador.UsarHabilidad();
     }
-
 }

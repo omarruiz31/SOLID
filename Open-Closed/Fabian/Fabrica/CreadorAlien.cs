@@ -1,12 +1,11 @@
 namespace OCP.Alien;
 
-public class CreadrorAlien : IAlien
+public class CreadorAlien : IAlien
 {
     public string Nombre { get; }
     public string Descripcion { get; }
-    public readonly string _habilidad;
-
-    public CreadrorAlien(string nombre, string descripcion, string habilidad)
+    private readonly string _habilidad;
+    public CreadorAlien(string nombre, string descripcion, string habilidad)
     {
         Nombre = nombre;
         Descripcion = descripcion;
@@ -15,6 +14,6 @@ public class CreadrorAlien : IAlien
 
     public void UsarHabilidad()
     {
-        System.Console.Writeline($"{Nombre} esta usando su habilidad: {_habilidad}");
+        System.Console.WriteLine($"{Nombre} : {_habilidad}");
     }
 }

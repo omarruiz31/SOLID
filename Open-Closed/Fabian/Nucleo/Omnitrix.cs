@@ -1,3 +1,6 @@
+using OCP.Alien;
+using OCP.Extenciones;
+
 namespace OCP.Nucleo;
 
 public class Omnitrix
@@ -8,15 +11,20 @@ public class Omnitrix
     public void Transformar(IAlien alien)
     {
         AlienActual = alien;
-        System.Console.Writeline($"Transformacion completa eres un {AlienActual}");
+        System.Console.WriteLine($"Transformacion completada. Ahora eres {AlienActual.Nombre}");
     }
 
     public void Destransformar(IAlien alien)
     {
         if (AlienActual != null)
         {
-            System.Console.Writeline($"Timeout. {AlienActual.Nombre} ahora es ben");
+            System.Console.WriteLine($"Timeout. {AlienActual.Nombre} ahora es Ben.");
             AlienActual = null;
         }
+    }
+
+    internal void Transformar(Skurd skurd)
+    {
+        Transformar((IAlien)skurd);
     }
 }

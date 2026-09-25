@@ -1,6 +1,6 @@
 using OCP.Alien;
 
-namespace OCP.Extensiones;
+namespace OCP.Extenciones;
 
 public class Fusion<TAlienA, TAlienB> : IAlien
     where TAlienA : IAlien, new()
@@ -8,12 +8,13 @@ public class Fusion<TAlienA, TAlienB> : IAlien
 {
     private readonly TAlienA _alienA = new();
     private readonly TAlienB _alienB = new();
-    public string Nombre => $"{_alienA.Nombre} + {_alienB.Nombre}";
-    public string Descripcion => $"Habilidades combinadas de {_alienA.Descripcion} + {_alienB.Descripcion}";
+
+    public string Nombre => $"Fusion {_alienA.Nombre} + {_alienB.Nombre}";
+    public string Descripcion => $" Habilidades combinadas de {_alienA.Nombre} y {_alienB.Nombre}";
 
     public void UsarHabilidad()
     {
-        System.Console.WriteLine($"{Nombre} activa ambas mitades de ADN fusionando:");
+        System.Console.WriteLine($" activas ambas mitades de ADN fusionando:");
         _alienA.UsarHabilidad();
         _alienB.UsarHabilidad();
     }
