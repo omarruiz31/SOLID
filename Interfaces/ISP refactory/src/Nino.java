@@ -1,4 +1,4 @@
-package PACKAGE_NAME;
-
-public class Nino {
+public interface Nino {
+    void llorar();
+    void cantar();
 }
