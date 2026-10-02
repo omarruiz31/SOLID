@@ -23,6 +23,6 @@ public class Nono  implements AccionesPersonaje{
 
     @Override
     public void llorar() {
-        System.out.println("Ajai ajia ");
+        System.out.println("Ajai ajia, ajua ");
     }
 }
